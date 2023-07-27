@@ -1,6 +1,7 @@
 # AySite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+It is a personal website to show off my resume and other projects. Built from scratch using Angular and Bootstrap.
 
 ## Development server
 
