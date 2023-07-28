@@ -5,20 +5,25 @@ import { AppComponent } from './app.component';
 import { ResumePageComponent } from './resume-page/resume-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResumePageComponent,
     ProjectsPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    AppRoutingModule,
+    FormsModule,
     
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
