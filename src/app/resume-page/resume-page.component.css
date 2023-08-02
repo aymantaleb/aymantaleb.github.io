@@ -1,3 +1,12 @@
-.resumeBox {
-    margin-top: 60px
+ .resumeBox {
+  height: 100%; /* Adjust based on your needs */
+  margin-top: 60px;
+  display: flex;
+}
+
+pdf-viewer{ 
+    width: 100%; 
+    height: 90vh;
+    overflow: hidden;
+    
 }

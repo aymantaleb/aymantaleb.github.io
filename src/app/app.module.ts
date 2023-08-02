@@ -8,6 +8,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 @NgModule({
   declarations: [
@@ -22,8 +24,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     NgbModule,
     AppRoutingModule,
     FormsModule,
-    
+    PdfViewerModule
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
