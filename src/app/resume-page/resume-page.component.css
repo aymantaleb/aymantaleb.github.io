@@ -1,5 +1,7 @@
  .resumeBox {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 60px); /* Adjust based on your needs */
@@ -7,6 +9,23 @@
   
 }
 
+.pdfDownload{
+  position: absolute;
+  right: 585px;
+  bottom: 30px;
+  z-index: 10;
+  font-size: x-large;
+  background: none;
+  border: 2px solid transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.pdfDownload:active{
+  border: 2px solid black;
+
+}
 
 
 pdf-viewer{ 
