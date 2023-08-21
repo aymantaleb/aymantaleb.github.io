@@ -1,7 +1,23 @@
 <div class="resumeBox">
-  <button class="pdfDownload" (click)="downloadPDF()"><i class="bi bi-file-earmark-arrow-down"></i></button>
-  <pdf-viewer 
-    [src]="pdfSource"
-    [render-text]="true"
-    [zoom]="0.815"></pdf-viewer>
+  <div class="viewerWrapper">
+    <pdf-viewer
+      [src]="pdfSource"
+      [render-text]="true"
+      [zoom]=".8"
+      [zoom-scale]= "isSmallScreen ? 'page-fit' : 'page-width'"
+      [original-size]="orignalSize"
+      [autoresize]="true"
+    ></pdf-viewer>
+
+   
+
+    
+
+  </div>
+  <div class="dlButton">
+    <button class="pdfDownload" (click)="downloadPDF()">
+      <i class="bi bi-file-earmark-arrow-down"></i>
+    </button>
+    </div>
+
 </div>

@@ -9,8 +9,14 @@ import { Component } from '@angular/core';
 })
 export class ResumePageComponent {
   pdfSource =  "assets/resumeMain.pdf";
+  zoomLevel = 0.815;
+  orignalSize = false;
+  zoomScale = 'page-width';
+  isSmallScreen = false;
 
-  constructor() { }
+  constructor() { 
+    this.onResize();
+  }
 
   downloadPDF(){
     const link = document.createElement('a');
@@ -20,6 +26,10 @@ export class ResumePageComponent {
     document.body.appendChild(link);
     link.click();
     link.remove();
+  }
+
+  onResize(){
+    this.isSmallScreen = window.innerWidth <= 700;
   }
 
   ngOnInit(): void {
