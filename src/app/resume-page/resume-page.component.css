@@ -29,8 +29,8 @@
    cursor: pointer;
    display: flex;
    width: 27px;
-   justify-content:start; 
-   align-items:start;  
+   justify-content: flex-start;
+   align-items: flex-start;
  }
 
  .pdfDownload:active {
@@ -44,8 +44,7 @@
   align-items:flex-end;     
   max-width: 27px;
   height: 95%;
-  /* max-height: 32px; */
- }
+  }
 
 
  pdf-viewer {

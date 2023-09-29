@@ -1,4 +1,21 @@
-@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.navLinks{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.themeSwitch{
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+.mat-icon{
+    vertical-align: middle;
+    font-size: 22px;
+    line-height: 21px;
+    
+}
 
 
 
@@ -68,6 +85,6 @@ body{
     text-decoration: underline;
 }
 
-i {
-    padding-right: 2.5px;
-}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

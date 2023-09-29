@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { ResumePageComponent } from './resume-page/resume-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,10 +23,12 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
   ],
   imports: [
     BrowserModule,
-    NgbModule,
     AppRoutingModule,
     FormsModule,
-    PdfViewerModule
+    PdfViewerModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
