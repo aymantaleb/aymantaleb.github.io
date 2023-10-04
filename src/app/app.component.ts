@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,6 +15,14 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       `pageDL`,
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/pageDL.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      `github`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/github.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      `linkedin`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/linkedin.svg")
     );
   }
   
