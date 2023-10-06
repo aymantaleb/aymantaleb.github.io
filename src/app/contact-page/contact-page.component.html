@@ -1,1 +1,36 @@
-<p>contact-page works!</p>
+<div class="mainSpace">
+  <div class="contentSpace">
+    <h1>Hi! If you would like to connect please send me an email. :) </h1>
+    <div id="formBox">
+      <mat-form-field>
+        <input matInput placeholder="Name" />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Enter your email"
+          [formControl]="email"
+          required
+        />
+        <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+      </mat-form-field>
+      <mat-form-field id="msgBox">
+        <textarea
+          matInput
+          placeholder="Message"
+          style="height: 100%; width: 100%; resize: none;"
+          rows="13"
+          cols="80"
+          
+        ></textarea>
+      </mat-form-field>
+
+      <button
+        mat-stroked-button
+        style="width: 100px; height: 45px; font-size: 20px"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

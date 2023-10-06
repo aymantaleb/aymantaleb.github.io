@@ -1,1 +1,15 @@
-<p>projects-page works!</p>
+<div class="mainSpace">
+  <div class="contentSpace">
+    <div *ngFor="let repo of repos">
+      <div id="repo">
+        <h2>{{ repo.name }}</h2>
+        <strong>Language: {{ repo.language }}</strong>
+        <p>{{ repo.description }}</p>
+        <a href="{{ repo.html_url }}">Link</a>
+        <button (click)="copyRepoCloneUrl(repo.clone_url)">Clone Repository</button>
+      </div>
+
+      <!-- Add more properties as needed -->
+    </div>
+  </div>
+</div>
