@@ -16,7 +16,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import {MatSelectModule} from '@angular/material/select';
 import {NgIf} from '@angular/common';
 import { ClipboardModule } from '@angular/cdk/clipboard';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +40,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSelectModule,
     NgIf,
     ClipboardModule,
-    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

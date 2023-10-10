@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectPageService } from './project-page.service';
 import { Clipboard } from '@angular/cdk/clipboard';
-import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 @Component({
@@ -15,7 +15,7 @@ export class ProjectsPageComponent {
   constructor(
     private Service: ProjectPageService,
     private clipboard: Clipboard,
-    private _snackBar: MatSnackBar
+    
   ) {}
 
   ngOnInit(): void {
@@ -40,6 +40,6 @@ export class ProjectsPageComponent {
     // Copy the clone URL to the clipboard
     this.clipboard.copy(cloneUrl);
     
-    this._snackBar.open('Clone URL copied to clipboard', 'Dismiss');
+    
   }
 }

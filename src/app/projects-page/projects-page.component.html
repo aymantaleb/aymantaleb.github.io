@@ -1,6 +1,8 @@
 <div class="mainSpace">
   <div class="contentSpace">
-    <div *ngFor="let repo of repos">
+
+    <ng-template ngFor let-repo [ngForOf]="repos"> 
+    <div >
       <div id="repo">
         <h2>{{ repo.name }}</h2>
         <strong>Language: {{ repo.language }}</strong>
@@ -8,8 +10,7 @@
         <a href="{{ repo.html_url }}">Link</a>
         <button (click)="copyRepoCloneUrl(repo.clone_url)">Clone Repository</button>
       </div>
-
-      <!-- Add more properties as needed -->
     </div>
+  </ng-template>
   </div>
 </div>
