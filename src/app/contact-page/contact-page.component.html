@@ -31,7 +31,7 @@
         mat-stroked-button
         (click)="formSubmit()"
         style="width: 100px; height: 45px; font-size: 20px"
-        [disabled]="nameField === '' || emailField === '' || msgField === ''"
+        [disabled]="nameField === '' || emailField === '' || msgField === '' || email.invalid"
       >
         Submit
       </button>

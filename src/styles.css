@@ -1,31 +1,29 @@
+@import 'src/custom-theme.scss';
 
-.navLinks{
+:root {
+    --background-color: #c9c7c7;
+    --primary-color: #3195ff;
+    --secondary-color: #ffcb94;
+}
+
+
+.navLinks {
     display: inline-block;
     vertical-align: middle;
 }
 
 
-.themeSwitch{
+.themeSwitch {
     vertical-align: middle;
     padding-top: 20px;
 }
 
-.mat-icon{
+.mat-icon {
     vertical-align: middle;
     font-size: 22px;
     line-height: 21px;
-    
+
 }
-
-
-
-body{
-    background-color: #c9c7c7;
-    margin: 0;
-    height: 100%;
-    padding: 0;
-}
-
 
 
 #Name {
@@ -64,15 +62,16 @@ body{
 }
 
 @media (max-width: 800px) {
-    .topnav{
+    .topnav {
         height: 50px;
     }
-    .topnav a{
+
+    .topnav a {
         font-size: 15px;
         padding: 0 0 0 0;
     }
 
-    #mainName{
+    #mainName {
         font-size: 15px;
     }
 }
@@ -81,10 +80,24 @@ body{
 
 
 
-.topnav a:hover, .topnav a:active  {
+.topnav a:hover,
+.topnav a:active {
     text-decoration: underline;
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden;}
+html {
+    height: 100%;
+}
+
+body {
+    
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow: hidden;
+    background-color: #c9c7c7;
+    height: 100%;
+    padding: 0;
+    
+}
+
