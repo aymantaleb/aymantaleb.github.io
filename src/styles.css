@@ -1,11 +1,11 @@
-@import 'src/custom-theme.scss';
+
 
 :root {
     --background-color: #c9c7c7;
     --primary-color: #3195ff;
     --secondary-color: #ffcb94;
 }
-
+@import 'src/custom-theme.scss';
 
 .navLinks {
     display: inline-block;

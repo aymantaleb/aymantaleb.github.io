@@ -3,14 +3,14 @@
     <h1>Hi! If you would like to connect please send me an email. :) </h1>
     <div id="formBox">
       <mat-form-field>
-        <input matInput placeholder="Name" [formControl]="name" [(ngModel)]="nameField"/>
+        <input matInput placeholder="Name" [formControl]="name"/>
       </mat-form-field>
       <mat-form-field>
         <input
           matInput
           placeholder="Enter your email"
           [formControl]="email"
-          [(ngModel)]="emailField"
+          
           required
         />
         <mat-error *ngIf="email.invalid" style="color: red;">{{ getErrorMessage() }}</mat-error>
@@ -23,7 +23,7 @@
           rows="13"
           cols="80"
           [formControl]="message"
-          [(ngModel)]="msgField"
+          
         ></textarea>
       </mat-form-field>
 
@@ -31,7 +31,7 @@
         mat-stroked-button
         (click)="formSubmit()"
         style="width: 100px; height: 45px; font-size: 20px"
-        [disabled]="nameField === '' || emailField === '' || msgField === '' || email.invalid"
+        [disabled]=" message.invalid || name.invalid || email.invalid"
       >
         Submit
       </button>
