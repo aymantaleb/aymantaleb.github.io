@@ -6,7 +6,7 @@ import { ResumePageComponent } from './resume-page/resume-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule,Validators, FormControl } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule, Validators, FormControl } from '@angular/forms'; 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
