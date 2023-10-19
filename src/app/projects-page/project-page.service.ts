@@ -16,4 +16,8 @@ export class ProjectPageService {
   getGithubRepos(username: string): Observable<any> {
     return this.http.get(`https://api.github.com/users/${username}/repos`);
   }
+
+  getRepoThumbnail(username: string, repo: string): Observable<any> {
+    return this.http.get(`https://api.github.com/repos/${username}/${repo}/contents/screenshot.png`);
+  }
 }

@@ -1,9 +1,10 @@
 <div class="mainSpace">
   <div class="contentSpace">
 
-    <ng-template ngFor let-repo [ngForOf]="repos"> 
-    <div >
+     
+    <div *ngFor="let repo of repos; index as i">
       <div id="repo">
+        <img [src]="imageUrls.at(i)"  [class.notExpanded]="!isExpanded[i]" [class.expanded]="isExpanded[i]" (click)="toggleImage(i)">
         <h2>{{ repo.name }}</h2>
         <strong>Language: {{ repo.language }}</strong>
         <p>{{ repo.description }}</p>
@@ -11,6 +12,6 @@
         
       </div>
     </div>
-  </ng-template>
+  
   </div>
 </div>

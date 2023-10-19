@@ -40,7 +40,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     MatSelectModule,
     NgIf,
     ClipboardModule,
-  ],
+      ],
   providers: [],
   bootstrap: [AppComponent],
 })
