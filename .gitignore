@@ -77,3 +77,4 @@ testem.log
 .DS_Store
 Thumbs.db
 angular.json
+contactHandler/src/main/resources/application-local.properties
