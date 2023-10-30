@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 
-public class emailDetails {
+public class EmailDetails {
 
     @Setter
     private String recipient;
