@@ -41,10 +41,5 @@ public class EmailServiceImpl implements EmailService {
         }
     }
 
-    @Override
-    public String sendMailWithAttachment(EmailDetails details) {
-        return null;
-    }
-
 
 }
