@@ -26,9 +26,7 @@ export class ContactPageComponent {
   }
 
   formSubmit() {
-    console.log(this.name.value);
-    console.log(this.email.value);
-    console.log(this.message.value);
+   
     const emailValue = this.email.value;
     const messageValue = this.message.value;
     const nameValue = this.name.value;
