@@ -18,9 +18,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "baseHref": "/AymanSite/",
             "allowedCommonJsDependencies": ["pdfjs-dist"],
-            "outputPath": "dist/ay-site",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
