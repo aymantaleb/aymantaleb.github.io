@@ -3,10 +3,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%; /* Set the desired width percentage */
-    height: 100%; /* Set the desired height percentage */
+    width: auto; /* Set the desired width percentage */
+    height: auto; /* Set the desired height percentage */
     cursor: zoom-out;
-    z-index: 1000; /* Ensure it's above other elements */
+    z-index: 10;
 }
 
 .notExpanded{

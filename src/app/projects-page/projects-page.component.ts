@@ -30,7 +30,11 @@ export class ProjectsPageComponent {
   loadGithubRepos(username: string): void {
     this.Service.getGithubRepos(username).subscribe(
       (data: any[]) => {
-        this.repos = data.sort((a, b) => {
+
+        const excludeRepo = 'AymanSite';
+
+        this.repos = data.filter(repo => repo.name !== excludeRepo)
+        .sort((a, b) => {
           const dateA = new Date(a.created_at);
           const dateB = new Date(b.created_at);
           return dateB.getTime() - dateA.getTime();
