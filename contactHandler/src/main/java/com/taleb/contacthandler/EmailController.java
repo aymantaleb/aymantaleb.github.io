@@ -3,8 +3,6 @@ package com.taleb.contacthandler;
 
 
 // Importing required classes
-import com.taleb.contacthandler.emailDetails;
-import com.taleb.contacthandler.emailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,14 +14,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
-public class emailController {
-    private static final Logger logger = LoggerFactory.getLogger(emailController.class);
+public class EmailController {
+    private static final Logger logger = LoggerFactory.getLogger(EmailController.class);
 
-    @Autowired private emailService emailService;
+    @Autowired private EmailService emailService;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://ayman-taleb.com/")
     @PostMapping("/sendMail")
-    public Map<String, Object> sendMail(@RequestBody emailDetails details)
+    public Map<String, Object> sendMail(@RequestBody EmailDetails details)
     {
         Map<String, Object> response = new HashMap<>();
         logger.info("Received email request: {}", details);
