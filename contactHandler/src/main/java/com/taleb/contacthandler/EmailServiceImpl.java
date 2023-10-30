@@ -1,28 +1,23 @@
 package com.taleb.contacthandler;
 
-import com.taleb.contacthandler.emailDetails;
-import java.io.File;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class emailServiceImpl implements emailService {
+public class EmailServiceImpl implements EmailService {
     private final JavaMailSender javaMailSender;
     private final String sender;
 
     @Autowired
-    public emailServiceImpl(JavaMailSender javaMailSender, @Value("${spring.mail.username}") String sender) {
+    public EmailServiceImpl(JavaMailSender javaMailSender, @Value("${spring.mail.username}") String sender) {
         this.javaMailSender = javaMailSender;
         this.sender = sender;
     }
-    public String sendSimpleMail(emailDetails details) {
+    public String sendSimpleMail(EmailDetails details) {
         try {
 
             // Creating a simple mail message
@@ -47,7 +42,7 @@ public class emailServiceImpl implements emailService {
     }
 
     @Override
-    public String sendMailWithAttachment(emailDetails details) {
+    public String sendMailWithAttachment(EmailDetails details) {
         return null;
     }
 
