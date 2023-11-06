@@ -31,7 +31,7 @@ export class ProjectsPageComponent {
     this.Service.getGithubRepos(username).subscribe(
       (data: any[]) => {
 
-        const excludeRepo = 'AymanSite';
+        const excludeRepo = 'aymantaleb.github.io';
 
         this.repos = data.filter(repo => repo.name !== excludeRepo)
         .sort((a, b) => {
