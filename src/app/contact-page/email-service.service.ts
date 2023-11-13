@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailServiceService {
-  private emailUrl: string = 'http://localhost:8080/sendMail';
+  private emailUrl: string = environment.emailUrl +'/sendMail';
   constructor(private http: HttpClient) { 
    
   }
