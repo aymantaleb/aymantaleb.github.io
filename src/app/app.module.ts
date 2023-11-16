@@ -16,6 +16,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import {MatSelectModule} from '@angular/material/select';
 import {NgIf} from '@angular/common';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { SplashPageComponent } from './splash-page/splash-page.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     ResumePageComponent,
     ProjectsPageComponent,
     ContactPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    SplashPageComponent
   ],
   imports: [
     BrowserModule,

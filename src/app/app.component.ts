@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './splash-page/splash-page.component.html',
+  styleUrls: ['./splash-page/splash-page.component.scss']
 })
 export class AppComponent {
   constructor(private matIconRegistry: MatIconRegistry,
