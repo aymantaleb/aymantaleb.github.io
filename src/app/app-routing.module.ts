@@ -7,10 +7,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SplashPageComponent } from './splash-page/splash-page.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
-  { path: 'resume', component: ResumePageComponent },
-  { path: 'project', component: ProjectsPageComponent },
-  { path: 'contact', component: ContactPageComponent },
+  // { path: 'home', component: HomePageComponent },
+  // { path: 'resume', component: ResumePageComponent },
+  // { path: 'project', component: ProjectsPageComponent },
+  // { path: 'contact', component: ContactPageComponent },
   { path: 'splash', component: SplashPageComponent },
   { path: '', redirectTo: '/splash', pathMatch: 'full' },
 ];
