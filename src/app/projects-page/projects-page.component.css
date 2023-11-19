@@ -4,7 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: auto; /* Set the desired width percentage */
-    height: auto; /* Set the desired height percentage */
+    height: 75%; /* Set the desired height percentage */
     cursor: zoom-out;
     z-index: 10;
 }

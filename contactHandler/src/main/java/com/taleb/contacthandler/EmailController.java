@@ -19,7 +19,7 @@ public class EmailController {
 
     @Autowired private EmailService emailService;
 
-    @CrossOrigin(origins = "http://localhost:4200/")
+    @CrossOrigin(origins = "${CORS_URL}")
     @PostMapping("/sendMail")
     public Map<String, Object> sendMail(@RequestBody EmailDetails details)
     {
