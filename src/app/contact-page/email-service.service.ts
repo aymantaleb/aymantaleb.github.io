@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class EmailServiceService {
-  private emailUrl: string = environment.emailUrl +'/sendMail';
+  private emailUrl: string = '/sendMail';
   constructor(private http: HttpClient) { 
    
   }

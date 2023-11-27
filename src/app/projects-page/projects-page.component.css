@@ -39,6 +39,7 @@
 
 #repo p {
     margin-bottom: 10px; /* Adjust the margin between p and button elements */
+    text-align: center;
 }
 
 #repo button {
