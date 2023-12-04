@@ -1,4 +1,4 @@
-<div class="mainSpace">
+<div class="mainSpace" *ngIf="!isMobileView">
   <div class="contentSpace">
 
      
@@ -12,6 +12,25 @@
         
       </div>
     </div>
+  
+  </div>
+</div>
+
+
+<div class="mainSpaceMobile" *ngIf="isMobileView">
+  
+
+     
+    <div *ngFor="let repo of repos; index as i">
+      <div id="repoMobile">
+        <img [src]="imageUrls.at(i)"  [class.notExpanded]="!isExpanded[i]" [class.expanded]="isExpanded[i]" (click)="toggleImage(i)">
+        <h2>{{ repo.name }}</h2>
+        <strong *ngIf="repo.language != null">Language: {{ repo.language }}</strong>
+        <p>{{ repo.description }}</p>
+        <a href="{{ repo.html_url }}" target="_blank">Link</a>
+        
+      </div>
+ 
   
   </div>
 </div>

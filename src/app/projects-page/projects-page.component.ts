@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 import { ProjectPageService } from './project-page.service';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { forkJoin } from 'rxjs';
@@ -13,7 +15,7 @@ export class ProjectsPageComponent {
   repoNames: string[] = [];
   imageUrls: string[] = [];
   isExpanded: boolean[] = [];
-
+  isMobileView: boolean = false;
   constructor(
     private Service: ProjectPageService,
     private clipboard: Clipboard
@@ -21,6 +23,19 @@ export class ProjectsPageComponent {
 
   ngOnInit(): void {
     this.loadGithubRepos('aymantaleb');
+    this.checkIfMobileView();
+    fromEvent(window, 'resize')
+    .pipe(debounceTime(200)) // Adjust the debounce time as needed
+    .subscribe(() => this.checkIfMobileView());
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkIfMobileView();
+  }
+
+  private checkIfMobileView() {
+    this.isMobileView = window.innerWidth <= 1000; // You can adjust this threshold as needed
   }
 
   toggleImage(index: number): void {

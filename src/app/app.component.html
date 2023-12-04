@@ -1,12 +1,40 @@
-<div class="topnav">
+<div class="topnav" *ngIf="!isMobileView">
   <a id="Name" routerLink="/home">Ayman Taleb</a>
   <div class="navLinks">
     <a routerLink="/contact"><mat-icon>mark_email_unread</mat-icon>Contact</a>
     <a routerLink="/project"><mat-icon>lightbulb_outline</mat-icon>Projects</a>
     <a routerLink="/resume"><mat-icon>description</mat-icon>Resume</a>
     <a routerLink="/home"><mat-icon>home</mat-icon>Home</a>
-    
   </div>
+</div>
+
+<div class="mobileNav" *ngIf="isMobileView">
+  <mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="menuButton">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu class="custom-menu-class" #menu="matMenu" xPosition="before" yPosition="above">
+      <div class="mobileLinks">
+        <button mat-menu-item>
+          <a routerLink="/home"><mat-icon>home</mat-icon>Home</a>
+        </button>
+        <button mat-menu-item>
+          <a routerLink="/resume"><mat-icon>description</mat-icon>Resume</a>
+        </button>
+        <button mat-menu-item>
+          <a routerLink="/project"
+            ><mat-icon>lightbulb_outline</mat-icon>Projects</a
+          >
+        </button>
+        <button mat-menu-item>
+          <a routerLink="/contact"
+            ><mat-icon>mark_email_unread</mat-icon>Contact</a
+          >
+        </button>
+    </div>
+    </mat-menu>
+    <span>Ayman Taleb</span>
+  </mat-toolbar>
 </div>
 
 <router-outlet></router-outlet>

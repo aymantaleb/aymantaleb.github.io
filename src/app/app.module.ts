@@ -16,6 +16,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import {MatSelectModule} from '@angular/material/select';
 import {NgIf} from '@angular/common';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     MatSelectModule,
     NgIf,
     ClipboardModule,
+    MatButtonModule, 
+    MatMenuModule,
+    MatToolbarModule,
       ],
   providers: [],
   bootstrap: [AppComponent],

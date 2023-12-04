@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { HttpClient } from '@angular/common/http';
+import { fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',
@@ -25,8 +28,26 @@ export class AppComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/linkedin.svg")
     );
   }
-  
+  isMobileView = false
   title = 'Ayman Taleb';
+
+  ngOnInit() {
+    this.checkIfMobileView();
+
+
+    fromEvent(window, 'resize')
+    .pipe(debounceTime(200)) // Adjust the debounce time as needed
+    .subscribe(() => this.checkIfMobileView());
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkIfMobileView();
+  }
+
+  private checkIfMobileView() {
+    this.isMobileView = window.innerWidth <= 1000; // You can adjust this threshold as needed
+  }
 
  
 }

@@ -1,19 +1,30 @@
-<div class="resumeBox">
+
+
+<div class="resumeBox" *ngIf="!isMobileView">
   <div class="viewerWrapper">
     <pdf-viewer
       [src]="pdfSource"
       [render-text]="true"
       [zoom]=".8"
-      [zoom-scale]= "isSmallScreen ? 'page-fit' : 'page-width'"
+      [zoom-scale]= "isMobileView ? 'page-fit' : 'page-width'"
       [original-size]="orignalSize"
       [autoresize]="true"
     ></pdf-viewer>
 
   </div>
-  <div class="dlButton">
-    <button class="pdfDownload" (click)="downloadPDF()">
-      <mat-icon svgIcon="pageDL" id="resumebutton" style="width: 65px; height: 65px;"></mat-icon>
-    </button>
-    </div>
 
+</div>
+
+
+
+<div class="resumeBox" *ngIf="isMobileView">
+  <div class="viewerWrapper">
+    <pdf-viewer
+      [src]="pdfSource"
+      [render-text]="true"
+      [zoom]="zoomLevel"
+      [zoom-scale]= "isMobileView ? 'page-fit' : 'page-width'"
+      [original-size]="orignalSize"
+      [autoresize]="true"
+    ></pdf-viewer>
 </div>
