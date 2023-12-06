@@ -46,6 +46,22 @@
         margin-bottom: 0px;
     }
     
+    .expandedMobile{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: 50%;
+        cursor: zoom-out;
+        z-index: 10;
+    }
+    
+    .notExpandedMobile{
+        width: 75px;
+        height: 75px;
+        cursor: zoom-in;
+    }
 
 }
 

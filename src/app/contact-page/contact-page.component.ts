@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 import { FormControl, Validators } from '@angular/forms';
 import { EmailServiceService } from './email-service.service';
 
@@ -16,6 +18,24 @@ export class ContactPageComponent {
   nameField: string = '';
   emailField: string = '';
   msgField: string = '';
+  isMobileView: boolean = false;
+
+  ngOnInit() {
+    this.checkIfMobileView();
+    fromEvent(window, 'resize')
+    .pipe(debounceTime(200)) // Adjust the debounce time as needed
+    .subscribe(() => this.checkIfMobileView());
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkIfMobileView();
+  }
+
+  private checkIfMobileView() {
+    this.isMobileView = window.innerWidth <= 1000; // You can adjust this threshold as needed
+  }
+
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
