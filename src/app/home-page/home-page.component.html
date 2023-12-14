@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="circleCrop">
-      <img class="rounded" src="assets/headshot.png" alt="aymanHeadshot" />
+      <img class="rounded" [src]="headshotImg" alt="aymanHeadshot" (click)="imgClick()"/>
     </div>
   </div>
   <div class="linkSpace">
@@ -50,7 +50,7 @@
 
 <div class="mobileSpace" *ngIf="isMobileView">
   <div class="circleCropMobile">
-    <img class="rounded" src="assets/headshot.png" alt="aymanHeadshot" />
+    <img class="rounded" [src]="headshotImg" alt="aymanHeadshot" (click)="imgClick()" />
   </div>
 
   <h1 id="homePageH1Mobile">About Me</h1>

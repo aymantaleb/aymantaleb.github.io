@@ -9,6 +9,9 @@ import { debounceTime } from 'rxjs/operators';
 })
 export class HomePageComponent implements OnInit {
   isMobileView: boolean = false;
+  clickCount: number = 0;
+  headshotImg: string = "assets/headshot.png"
+  monkeyImg: string = "assets/monkey.png"
 
   constructor() {}
 
@@ -26,6 +29,15 @@ export class HomePageComponent implements OnInit {
 
   private checkIfMobileView() {
     this.isMobileView = window.innerWidth <= 1000; // You can adjust this threshold as needed
+  }
+
+
+  imgClick(){
+    if(this.clickCount == 5){
+      this.clickCount = 0;
+      this.headshotImg = this.monkeyImg;
+    }
+    this.clickCount++;
   }
 
 }
