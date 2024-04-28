@@ -1,5 +1,5 @@
 export const environment = {
-    siteKey: '6LfmgckpAAAAAJrkN4PsK1NKQRvwVOB3vdJa8Pa_'
+    siteKey: '6Lfbh8kpAAAAAMj2cGYy0k3ZX7C6b0QtDcGt4JLS'
   };
 
   

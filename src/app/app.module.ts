@@ -52,7 +52,7 @@ import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from "ng-recaptcha";
     RecaptchaV3Module,
     RecaptchaFormsModule 
       ],
-  providers: [{ provide: RECAPTCHA_V3_SITE_KEY, useValue: "6LfmgckpAAAAAJrkN4PsK1NKQRvwVOB3vdJa8Pa_" }],
+  providers: [{ provide: RECAPTCHA_V3_SITE_KEY, useValue: "6Lfbh8kpAAAAAMj2cGYy0k3ZX7C6b0QtDcGt4JLS" }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

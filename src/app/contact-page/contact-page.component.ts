@@ -72,6 +72,6 @@ export class ContactPageComponent {
 
   public reCaptcha(): void {
     this.recaptchaV3Service.execute('importantAction')
-      .subscribe((token: string) => console.debug(`Token [${token}] generated`))
+      .subscribe()
   }
 }
