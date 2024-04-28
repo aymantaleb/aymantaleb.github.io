@@ -1,19 +1,20 @@
 <div class="mainSpace" *ngIf="!isMobileView">
   <div class="contentSpace">
     <h1>Hi! If you would like to connect please send me an email. :) </h1>
-    <div id="formBox">
+    <form id="formBox" class="contact-form" (submit)="formSubmit($event)">
       <mat-form-field>
-        <input matInput placeholder="Name" [formControl]="name"/>
+        <input  type="text" matInput placeholder="Name" [formControl]="user_name" name="user_name"/>
       </mat-form-field>
       <mat-form-field>
         <input
           matInput
+          type="email"
           placeholder="Enter your email"
-          [formControl]="email"
-          
+          [formControl]="user_email"
+          name="user_email"
           required
         />
-        <mat-error *ngIf="email.invalid" style="color: red;">{{ getErrorMessage() }}</mat-error>
+        <mat-error *ngIf="user_email.invalid" style="color: red;">{{ getErrorMessage() }}</mat-error>
       </mat-form-field>
       <mat-form-field id="msgBox">
         <textarea
@@ -23,19 +24,20 @@
           rows="13"
           cols="80"
           [formControl]="message"
-          
+          name="message"
         ></textarea>
       </mat-form-field>
-
+      
       <button
         mat-stroked-button
-        (click)="formSubmit()"
+        (click)="reCaptcha()"
+        type="submit"
         style="width: 100px; height: 45px; font-size: 20px"
-        [disabled]=" message.invalid || name.invalid || email.invalid"
+        [disabled]=" message.invalid || user_name.invalid || user_email.invalid"
       >
         Submit
       </button>
-    </div>
+    </form>
   </div>
 </div>
 
@@ -44,19 +46,20 @@
 <div class="mainSpaceMobile" *ngIf="isMobileView">
   <div class="contentSpaceMobile">
     <h1>Hi! If you would like to connect please send me an email. :) </h1>
-    <div id="formBoxMobile">
+    <form id="formBoxMobile" (ngSubmit)="formSubmit($event)">
       <mat-form-field>
-        <input matInput placeholder="Name" [formControl]="name"/>
+        <input type="text" matInput placeholder="Name" [formControl]="user_name" name="user_name"/>
       </mat-form-field>
       <mat-form-field>
         <input
+          type="email"
           matInput
           placeholder="Enter your email"
-          [formControl]="email"
-          
+          [formControl]="user_email"
+          name="user_email"
           required
         />
-        <mat-error *ngIf="email.invalid" style="color: red;">{{ getErrorMessage() }}</mat-error>
+        <mat-error *ngIf="user_email.invalid" style="color: red;">{{ getErrorMessage() }}</mat-error>
       </mat-form-field>
       <mat-form-field id="msgBox">
         <textarea
@@ -66,18 +69,18 @@
           rows="13"
           cols="80"
           [formControl]="message"
-          
+          name="message"
         ></textarea>
       </mat-form-field>
 
       <button
         mat-stroked-button
-        (click)="formSubmit()"
+        type="submit"
         style="width: 100px; height: 45px; font-size: 20px"
-        [disabled]=" message.invalid || name.invalid || email.invalid"
+        [disabled]=" message.invalid || user_name.invalid || user_email.invalid"
       >
         Submit
       </button>
-    </div>
+    </form>
   </div>
 </div>

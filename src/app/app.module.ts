@@ -19,6 +19,8 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from "ng-recaptcha";
 
 
 @NgModule({
@@ -46,8 +48,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatButtonModule, 
     MatMenuModule,
     MatToolbarModule,
+    RecaptchaModule,
+    RecaptchaV3Module,
+    RecaptchaFormsModule 
       ],
-  providers: [],
+  providers: [{ provide: RECAPTCHA_V3_SITE_KEY, useValue: "6LfmgckpAAAAAJrkN4PsK1NKQRvwVOB3vdJa8Pa_" }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,5 @@
 export const environment = {
-    production: true,
-    emailUrl: ''
+    siteKey: '6LfmgckpAAAAAJrkN4PsK1NKQRvwVOB3vdJa8Pa_'
   };
 
   
