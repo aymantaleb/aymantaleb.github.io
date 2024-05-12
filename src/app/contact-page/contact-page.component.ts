@@ -58,7 +58,8 @@ export class ContactPageComponent {
         publicKey: 'aaKkS6BIEHx5Ki-XH'
       } )
       .then(
-        () => {console.log('email Sent');}
+        () => {alert("Email Sent!");
+          console.log('email Sent');}
         , (error) => {console.log('FAILED...', (error as EmailJSResponseStatus).text);}
       )
 
