@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule, Validators, FormControl } from '@angular/forms'; 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -23,36 +23,29 @@ import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from "ng-recaptcha";
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    ResumePageComponent,
-    ProjectsPageComponent,
-    ContactPageComponent,
-    HomePageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule, 
-    PdfViewerModule,
-    MatIconModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    NgIf,
-    ClipboardModule,
-    MatButtonModule, 
-    MatMenuModule,
-    MatToolbarModule,
-    RecaptchaModule,
-    RecaptchaV3Module,
-    RecaptchaFormsModule 
-      ],
-  providers: [{ provide: RECAPTCHA_V3_SITE_KEY, useValue: "6Lfbh8kpAAAAAMj2cGYy0k3ZX7C6b0QtDcGt4JLS" }],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        ResumePageComponent,
+        ProjectsPageComponent,
+        ContactPageComponent,
+        HomePageComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        PdfViewerModule,
+        MatIconModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        NgIf,
+        ClipboardModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatToolbarModule,
+        RecaptchaModule,
+        RecaptchaV3Module,
+        RecaptchaFormsModule], providers: [{ provide: RECAPTCHA_V3_SITE_KEY, useValue: "6Lfbh8kpAAAAAMj2cGYy0k3ZX7C6b0QtDcGt4JLS" }, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
