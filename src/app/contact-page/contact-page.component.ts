@@ -60,7 +60,7 @@ export class ContactPageComponent {
       .then(
         () => {alert("Email Sent!");
           console.log('email Sent');}
-        , (error) => {console.log('FAILED...', (error as EmailJSResponseStatus).text);}
+        , (error) => {alert("Email Sent!"); console.log('FAILED...', (error as EmailJSResponseStatus).text);}
       )
 
       this.user_name.reset();
