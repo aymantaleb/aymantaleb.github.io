@@ -19,15 +19,15 @@ export class ResumePageComponent {
     this.onResize();
   }
 
-  // downloadPDF() {
-  //   const link = document.createElement('a');
-  //   link.setAttribute('target', '_blank');
-  //   link.setAttribute('href', 'assets/resumeMain.pdf');
-  //   link.setAttribute('download', 'AymanTalebResume.pdf');
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   link.remove();
-  // }
+  downloadPDF() {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'assets/resumeMain.pdf');
+    link.setAttribute('download', 'resumeMain.pdf');
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
 
   ngOnInit() {
     this.checkIfMobileView();

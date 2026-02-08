@@ -20,7 +20,7 @@
         background-color: #fff;
         padding: 25px;
         border-radius: 10px;
-        box-shadow: 0 0 15px #ffcb94;
+        box-shadow: 0 0 5px #3195ff;
         /* margin-right: 40px; */
         margin-top: 15px;
         display: flex;
@@ -89,7 +89,7 @@
     background-color: #fff;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 0 15px #ffcb94;
+    box-shadow: 0 0 5px #3195ff;
     margin-right: 40px;
     margin-top: 15px;
     display: flex;

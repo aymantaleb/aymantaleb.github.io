@@ -46,11 +46,6 @@
 
 }
 
-
-
-
-
-
 .socialLink {
     text-decoration: none;
     color: black;
@@ -86,7 +81,7 @@ img.rounded {
     height: 100%;
     width: 100%;
     transform: scaleX(-1);
-    background-color: #ffcb94;
+    background-color: #ffffff;
 }
 
 .mainSpace {

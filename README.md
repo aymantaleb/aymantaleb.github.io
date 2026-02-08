@@ -1,3 +1,3 @@
 # AySite
 
-Source code for my personal website. Front end is angular, back end is java spring.
+Source code for my personal website. Written in Angular.

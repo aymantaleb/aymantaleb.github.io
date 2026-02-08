@@ -43,11 +43,8 @@
  }
 
  .dlButton{
-  display: flex;
-  justify-content: flex-end; 
-  align-items:flex-end;     
-  /* max-width: 27px; */
-  height: 95%;
+  height: fit-content;
+  width: fit-content;
   }
 
 

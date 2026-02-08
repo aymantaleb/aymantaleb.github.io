@@ -11,7 +11,6 @@ export class HomePageComponent implements OnInit {
   isMobileView: boolean = false;
   clickCount: number = 0;
   headshotImg: string = "assets/headshot.png"
-  monkeyImg: string = "assets/monkey.png"
   homepageAboutMe: string = `My name is Ayman Taleb and I'm a passionate Computer Engineer. I
           graduated from UC Irvine with a degree in Computer Engineering in 2023
           and Im constantly striving to improve my skill set. Currently, I am
@@ -48,12 +47,5 @@ export class HomePageComponent implements OnInit {
   }
 
 
-  imgClick(){
-    if(this.clickCount == 5){
-      this.clickCount = 0;
-      this.headshotImg = this.monkeyImg;
-    }
-    this.clickCount++;
-  }
 
 }
